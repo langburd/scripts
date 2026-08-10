@@ -51,10 +51,7 @@ def get_repositories(org):
             page += 1
 
         except requests.exceptions.Timeout:
-            print(
-                "Request timed out. Please check your network connection and "
-                "try again."
-            )
+            print("Request timed out. Please check your network connection and " "try again.")
             break
         except requests.exceptions.RequestException as e:
             print(f"An error occurred: {e}")
