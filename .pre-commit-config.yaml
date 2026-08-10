@@ -36,14 +36,14 @@ repos:
 
   # Markdown tools
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.49.1
     hooks:
       - id: markdownlint-fix
         args: ["--disable", "MD013"]
 
   # Python hooks
-  - repo: https://github.com/psf/black
-    rev: 25.9.0
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.5.1
     hooks:
       - id: black
         language_version: python3.12
@@ -55,18 +55,18 @@ repos:
         args: ["--max-line-length=100", "--ignore=E203,E266,E501,W503"]
 
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
+    rev: 9.0.0b2
     hooks:
       - id: isort
         args: ["--profile", "black", "--filter-files"]
 
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.405
+    rev: v1.1.411
     hooks:
       - id: pyright
 
   - repo: https://github.com/PyCQA/pylint
-    rev: v3.3.8
+    rev: v4.0.7
     hooks:
       - id: pylint
         args: [--fail-under=9.8]
